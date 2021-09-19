@@ -54,9 +54,11 @@ class KeyIndex:
         for i in a:
             k[i+x] += 1
         self.k = k
+        self.l = l
+        self.s = s
 
     def search(self, n):
-        if n > self.l:
+        if n > self.l or n < self.s:
             return False
         elif self.k[n+self.x] > 0:
             return True
